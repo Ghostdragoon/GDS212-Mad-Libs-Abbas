@@ -7,6 +7,7 @@ public class Rotator : MonoBehaviour
     [SerializeField] private Vector3 spinCloads;
     [SerializeField] private float speed = 1f;
     [SerializeField] private Light moonlight;
+    [SerializeField] private Light moonlight2;
     [SerializeField] private GameObject proceedButton;
     public Color startColor;
     public Color endColor;
@@ -32,6 +33,7 @@ public class Rotator : MonoBehaviour
         float t = Mathf.InverseLerp(100f, 170f, rotationProgress);
 
         moonlight.color = Color.Lerp(startColor, endColor, t);
+        moonlight2.color = Color.Lerp(startColor, endColor, t);
 
         if (rotationProgress > 170)
         {
